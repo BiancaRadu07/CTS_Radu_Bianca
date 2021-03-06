@@ -1,16 +1,16 @@
-package ro.ase.cts.clase;
-
-
+package ro.ase.cts.reader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Utils {
+import ro.ase.cts.clase.Angajat;
+import ro.ase.cts.clase.Elev;
+import ro.ase.cts.clase.Student;
 
+public class ReaderAngajati {
 	public static List<Student> readStudents(String file) throws FileNotFoundException, NumberFormatException {
 		Scanner input = new Scanner(new File(file));
 		input.useDelimiter(",|\n");
@@ -81,29 +81,7 @@ public class Utils {
 		return elevi;
 	}
 
-	public static void readAll() {
-		List<Elev> listaelevi;
-		List<Student> listastudenti;
-		List<Angajat> listaangajati;
+	
 
-		try {
-			System.out.println("aasdasdasdas =>>>>>>>>>>.");
-
-			listaelevi = Utils.readPupil("elevi.txt");
-
-			for (int i = 0; i < listaelevi.size(); i++)
-				System.out.println(listaelevi.get(i).toString());
-
-			listastudenti = Utils.readStudents("studenti.txt");
-			for (int i = 0; i < listastudenti.size(); i++)
-				System.out.println(listastudenti.get(i).toString());
-
-			listaangajati = Utils.readAngajati("angajati.txt");
-			for (int i = 0; i < listaangajati.size(); i++)
-				System.out.println(listaangajati.get(i).toString());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 
 }
