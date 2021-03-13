@@ -5,7 +5,16 @@ import java.util.List;
 
 import ro.ase.cts.clase.Aplicant;
 
-public interface ReaderAplicant {
+public abstract class ReaderAplicant {
+	
+	protected String numeFisier;
 
-	public List<Aplicant> readAplicanti(String file)  throws FileNotFoundException;
+	public abstract List<Aplicant> readAplicanti()  throws FileNotFoundException;
+
+	public ReaderAplicant(String numeFisier) {
+		super();
+		this.numeFisier = numeFisier;
+	}
+	
+	
 }
