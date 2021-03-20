@@ -20,7 +20,7 @@ public class AsigurareMedicala {
 	}
 	
 	//3-getInstance
-	//folosim synchronized
+	//folosim synchronized pt a putea fi folosit pe un singur fir de executie (asincron, sa se termine prima operatie)
 	public static synchronized AsigurareMedicala getInstance(int id, String numeAsigurat, float contributie) {
 		if(asigurareMedicala==null) {
 			asigurareMedicala=new AsigurareMedicala(id,numeAsigurat,contributie);

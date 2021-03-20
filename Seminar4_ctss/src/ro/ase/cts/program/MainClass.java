@@ -1,5 +1,6 @@
 package ro.ase.cts.program;
 
+import ro.ase.cts.singleton.romb.Romb;
 import ro.ase.cts.singletone.AsigurareMedicala;
 
 public class MainClass {
@@ -22,6 +23,13 @@ public class MainClass {
 		
 		System.out.println(asigurareLazy1.toString());
 		System.out.println(asigurareLazy2.toString());
+		
+		
+		Romb romb1 = Romb.getInstance(1, 100.4f, "Galben");
+		Romb romb2 = Romb.getInstance(2, 460.4f, "Albastru");
+		
+		System.out.println(romb1.toString());
+		System.out.println(romb2.toString());
 		
 	}
 
